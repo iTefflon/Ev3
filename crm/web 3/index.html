@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Peso ideal</title>
+        <script src="js/funciones.js"></script>
+        <!-- Vinculamos estilo CSS mediante archivo externo-->
+        <link rel="stylesheet" href="css/estilos.css">
+        <!-- Incorporamos bootstrap mediante CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+        <div id="titulo-principal">
+            <h1>Peso ideal App</h1>         
+        </div>
+        <hr>
+        <!-- Formulario con estilos de bootstrap-->
+        <div>
+            <form>
+                <!--Entrada de edad -->
+                <div class="mb-3">
+                  <label for="txt_edad" class="form-label">Edad</label>
+                  <input type="number" class="form-control" id="txt_edad" aria-describedby="txt_edad_Help">
+                  <div id="txt_edad_Help" class="form-text">Edad entre 1 y 10.</div>
+                </div>
+                <!-- Entrada de peso actual-->
+                <div class="mb-3">
+                  <label for="txt_peso_actual" class="form-label">Peso Actual</label>
+                  <input type="number" class="form-control" id="txt_peso_actual" aria-describedby="txt_peso_actual_Help">
+                  <div id="txt_peso_actual_Help" class="form-text">Ingrese peso actual en kilos.</div>    
+                </div>
+                <!--Botón para calcular-->
+                <input type="button" value="Calcular" onclick="calcularPesoIdeal();"  class="btn btn-primary">
+              </form>
+        </div>
+
+        <div>
+            <!-- tarjeta-->
+            <div class="card" style="width: 18rem;">
+                <img src="img/fondo_card_400x267.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Tus resultados</h5>
+                  <p class="card-text">Mira los resultados de tu peso ideal.</p>
+                  <!-- Resultado -->
+                    <div id="cnt_peso_ideal"></div>
+                    <div id="cnt_estado"></div>
+                    <div id="cnt_diferencia"></div>
+                    <div id="cnt_imagen"></div>
+                </div>
+              </div>
+           
+        </div>
+    </div>
+    </body>
+</html>

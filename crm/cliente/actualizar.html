@@ -1,0 +1,38 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Cliente</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body onload="obtenerIdActualizacion()">
+    <div class="container">
+        <h1>Actualizar Cliente</h1>
+        <form>
+            <input type="hidden" id="txt_id_cliente">
+            <div class="form-group">
+                <label for="txt_dv">DV</label>
+                <input type="text" class="form-control" id="txt_dv" maxlength="1" required>
+            </div>
+            <div class="form-group">
+                <label for="txt_nombre">Nombres</label>
+                <input type="text" class="form-control" id="txt_nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="txt_apellido">Apellidos</label>
+                <input type="text" class="form-control" id="txt_apellido" required>
+            </div>
+            <div class="form-group">
+                <label for="txt_email">Email</label>
+                <input type="email" class="form-control" id="txt_email" required>
+            </div>
+            <div class="form-group">
+                <label for="txt_celular">Celular</label>
+                <input type="number" class="form-control" id="txt_celular" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="actualizarCliente()">Actualizar Cliente</button>
+        </form>
+    </div>
+    <script src="../js/cliente.js"></script>
+</body>
+</html>
